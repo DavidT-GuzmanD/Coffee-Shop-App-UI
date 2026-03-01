@@ -1,0 +1,67 @@
+[
+    {
+        "id": "1",
+        "nombre": "Caffe Mocha",
+        "categoria": "Machiato",
+        "tipo": "Ice/Hot",
+        "ingredientes": "Deep Foam",
+        "descripcion": "Un café mocha decadente con una mezcla perfecta de espresso, chocolate caliente rallado y leche vaporizada con una espuma profunda.",
+        "precio": 4.53,
+        "rating": 4.8,
+        "review_count": 230,
+        "tamanos": [
+            "S",
+            "M",
+            "L"
+        ],
+        "imagen": "assets/2.png"
+    },
+    {
+        "id": "2",
+        "nombre": "Flat White",
+        "categoria": "Latte",
+        "tipo": "Hot",
+        "ingredientes": "Espresso & Milk",
+        "descripcion": "Una bebida a base de espresso preparada con leche texturizada al vapor, creando una microespuma aterciopelada y un sabor fuerte a café.",
+        "precio": 3.90,
+        "rating": 4.7,
+        "review_count": 180,
+        "tamanos": [
+            "S",
+            "M"
+        ],
+        "imagen": "assets/3.png"
+    },
+    {
+        "id": "3",
+        "nombre": "Mocha Frap",
+        "categoria": "All Coffee",
+        "tipo": "Ice",
+        "ingredientes": "Ice & Cream",
+        "descripcion": "El balance perfecto de espresso mezclado con chocolate, hielo y leche, coronado con una abundante capa de crema batida.",
+        "precio": 5.10,
+        "rating": 4.9,
+        "review_count": 420,
+        "tamanos": [
+            "M",
+            "L"
+        ],
+        "imagen": "assets/4.png"
+    },
+    {
+        "id": "4",
+        "nombre": "Caffe Panna",
+        "categoria": "Americano",
+        "tipo": "Ice/Hot",
+        "ingredientes": "Whipped Cream",
+        "descripcion": "Un shot doble de espresso intenso coronado con una generosa porción de deliciosa y fresca crema batida artesanal.",
+        "precio": 4.20,
+        "rating": 4.6,
+        "review_count": 115,
+        "tamanos": [
+            "S",
+            "M"
+        ],
+        "imagen": "assets/5.png"
+    }
+]

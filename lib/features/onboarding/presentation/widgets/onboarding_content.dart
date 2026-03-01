@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/widgets/primary_button.dart';
 
@@ -93,14 +94,7 @@ class OnboardingContent extends StatelessWidget {
                 PrimaryButton(
                   text: 'Get Started',
                   onPressed: () {
-                    // Action when user clicks Get Started
-                    // Typically navs to home. Example: context.go('/home')
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(
-                        content: Text('Welcome to Coffee Shop!'),
-                        backgroundColor: AppColors.primary,
-                      ),
-                    );
+                    context.go('/home');
                   },
                 ),
                 const SizedBox(height: 20), // Bottom padding
