@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../data/models/coffee.dart';
 import '../../data/repositories/coffee_repository.dart';
@@ -116,9 +117,12 @@ class _HomePageState extends State<HomePage> {
                       return CoffeeCard(
                         imageUrl: coffee.imagen,
                         title: coffee.nombre,
-                        subtitle: coffee.ingredientes,
+                        subtitle: coffee.tipo,
                         price: coffee.precio,
                         rating: coffee.rating,
+                        onTap: () {
+                          context.push('/detail', extra: coffee);
+                        },
                       );
                     },
                   );

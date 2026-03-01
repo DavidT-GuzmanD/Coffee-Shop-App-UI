@@ -4,6 +4,8 @@ import 'package:go_router/go_router.dart';
 import '../../features/onboarding/presentation/pages/onboarding_page.dart';
 import '../../features/main/presentation/pages/main_shell_page.dart';
 import '../../features/home/presentation/pages/home_page.dart';
+import '../../features/home/data/models/coffee.dart';
+import '../../features/detail/presentation/pages/detail_page.dart';
 
 class AppRouter {
   static final _rootNavigatorKey = GlobalKey<NavigatorState>();
@@ -16,6 +18,14 @@ class AppRouter {
       GoRoute(
         path: '/onboarding',
         builder: (context, state) => const OnboardingPage(),
+      ),
+      GoRoute(
+        path: '/detail',
+        parentNavigatorKey: _rootNavigatorKey,
+        builder: (context, state) {
+          final coffee = state.extra as Coffee;
+          return DetailPage(coffee: coffee);
+        },
       ),
       ShellRoute(
         navigatorKey: _shellNavigatorKey,
