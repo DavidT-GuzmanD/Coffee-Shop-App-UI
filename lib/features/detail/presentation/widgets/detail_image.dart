@@ -8,7 +8,7 @@ class DetailImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 226,
+      height: 250,
       width: double.infinity,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
