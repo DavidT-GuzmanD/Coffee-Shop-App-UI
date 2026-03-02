@@ -6,6 +6,7 @@ import '../../features/main/presentation/pages/main_shell_page.dart';
 import '../../features/home/presentation/pages/home_page.dart';
 import '../../features/home/data/models/coffee.dart';
 import '../../features/detail/presentation/pages/detail_page.dart';
+import '../../features/order/presentation/pages/order_page.dart';
 
 class AppRouter {
   static final _rootNavigatorKey = GlobalKey<NavigatorState>();
@@ -25,6 +26,14 @@ class AppRouter {
         builder: (context, state) {
           final coffee = state.extra as Coffee;
           return DetailPage(coffee: coffee);
+        },
+      ),
+      GoRoute(
+        path: '/order',
+        parentNavigatorKey: _rootNavigatorKey,
+        builder: (context, state) {
+          final args = state.extra as OrderArgs;
+          return OrderPage(args: args);
         },
       ),
       ShellRoute(

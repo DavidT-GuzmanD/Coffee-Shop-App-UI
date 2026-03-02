@@ -3,8 +3,9 @@ import '../../../../core/theme/app_colors.dart';
 
 class DetailBottomBar extends StatelessWidget {
   final double price;
+  final VoidCallback? onTap;
 
-  const DetailBottomBar({super.key, required this.price});
+  const DetailBottomBar({super.key, required this.price, this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +44,7 @@ class DetailBottomBar extends StatelessWidget {
             width: 217,
             height: 58,
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: onTap,
               style: ElevatedButton.styleFrom(
                 backgroundColor: AppColors.primary,
                 shape: RoundedRectangleBorder(

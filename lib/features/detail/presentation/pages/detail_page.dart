@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../home/data/models/coffee.dart';
 import '../widgets/detail_app_bar.dart';
@@ -7,6 +8,7 @@ import '../widgets/detail_description.dart';
 import '../widgets/detail_image.dart';
 import '../widgets/detail_info.dart';
 import '../widgets/detail_size_selector.dart';
+import '../../../order/presentation/pages/order_page.dart';
 
 class DetailPage extends StatefulWidget {
   final Coffee coffee;
@@ -53,7 +55,15 @@ class _DetailPageState extends State<DetailPage> {
           ],
         ),
       ),
-      bottomNavigationBar: DetailBottomBar(price: widget.coffee.precio),
+      bottomNavigationBar: DetailBottomBar(
+        price: widget.coffee.precio,
+        onTap: () {
+          context.push(
+            '/order',
+            extra: OrderArgs(coffee: widget.coffee, selectedSize: selectedSize),
+          );
+        },
+      ),
     );
   }
 }
